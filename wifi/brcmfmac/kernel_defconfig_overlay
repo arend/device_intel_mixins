@@ -1,0 +1,10 @@
+# on Android firmware tends to be in /system/etc/firmware
+# so make kernel look there.
+CONFIG_CMDLINE_BOOL=y
+CONFIG_CMDLINE="firmware_class.path=/system/etc/firmware"
+# for convenience have cfg80211 as module, which
+# makes mac80211 a modules as well
+CONFIG_CFG80211=m
+CONFIG_MAC80211=m
+# enable brcmfmac driver built
+CONFIG_BRCMFMAC=n
